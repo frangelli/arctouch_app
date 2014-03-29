@@ -6,6 +6,7 @@
 arctouchApp.config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 
   var states = {
+
     'index': {
       url: '',
       controller: ['$location',
@@ -15,27 +16,34 @@ arctouchApp.config(['$stateProvider','$urlRouterProvider', function($stateProvid
       ]
     },
 
-    'main': {
-          abstract: true,
-          templateUrl: 'views/main.html',
-          controller: 'MainController'
+    'routes': {
+      url:'/routes',
+      templateUrl: 'views/routes_list.html',
+      controller: 'RoutesListController'
     },
 
-    'main.routes': {
-      url:'/routes',
+    'details': {
+      abstract: true,
+      url:'/details',
+      templateUrl: 'views/routes_details.html',
+      controller: 'RoutesDetailsController'
+    },
+
+    'details.stops': {
+      url:'/details/stops',
       views: {
-        'content@main': {
-          templateUrl: 'views/routes_list.html',
-          controller: 'RoutesListController'
+        'content@routes': {
+          templateUrl: 'views/route_stops.html',
+          controller: 'RoutesDetailsController'
         }
       }
     },
 
-    'main.routes.details': {
-      url:'/routes/details',
+    'details.departures': {
+      url:'/details/departures',
       views: {
-        'content@main': {
-          templateUrl: 'views/routes_details.html',
+        'content@routes': {
+          templateUrl: 'views/route_departures.html',
           controller: 'RoutesDetailsController'
         }
       }

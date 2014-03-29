@@ -4,7 +4,7 @@ arctouchApp.controller('RoutesListController',['$scope','$location', function ($
 
   $scope.searchRoute = function() {
 
-    $location.path('/routes/details');
+    $location.path('/details/stops');
 
   };
 
