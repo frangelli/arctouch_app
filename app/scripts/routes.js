@@ -16,6 +16,11 @@ arctouchApp.config(['$stateProvider','$urlRouterProvider', function($stateProvid
       ]
     },
 
+    '404': {
+      url: '/404',
+      templateUrl: 'views/404.html'
+    },
+
     'routes': {
       url:'/routes',
       templateUrl: 'views/routes_list.html',
@@ -24,7 +29,6 @@ arctouchApp.config(['$stateProvider','$urlRouterProvider', function($stateProvid
 
     'details': {
       abstract: true,
-      url:'/details',
       templateUrl: 'views/routes_details.html',
       controller: 'RoutesDetailsController'
     },
@@ -32,7 +36,7 @@ arctouchApp.config(['$stateProvider','$urlRouterProvider', function($stateProvid
     'details.stops': {
       url:'/details/stops',
       views: {
-        'content@routes': {
+        'content@details': {
           templateUrl: 'views/route_stops.html',
           controller: 'RoutesDetailsController'
         }
@@ -54,6 +58,8 @@ arctouchApp.config(['$stateProvider','$urlRouterProvider', function($stateProvid
   angular.forEach(states, function(stateConfig, stateName) {
       $stateProvider.state(stateName, stateConfig);
   });
+
+  $urlRouterProvider.otherwise('/404');
 
 
 }]);

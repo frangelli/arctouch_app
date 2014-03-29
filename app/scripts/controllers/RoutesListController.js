@@ -1,10 +1,10 @@
-arctouchApp.controller('RoutesListController',['$scope','$location', function ($scope , $location) {
+arctouchApp.controller('RoutesListController',['$scope','$location','$state', function ($scope , $location,$state) {
 
   $scope.searchTerm = "";
 
   $scope.searchRoute = function() {
 
-    $location.path('/details/stops');
+    $state.go('details.stops');
 
   };
 
