@@ -1,0 +1,32 @@
+<div class="topcoat-navigation-bar">
+
+   <div class="topcoat-navigation-bar__item center full">
+       <h1 class="topcoat-navigation-bar__title">Floripa Routes</h1>
+   </div>
+
+</div>
+
+<div id="main">
+
+  <div class="search-box">
+    <form ng-submit="searchRoute()">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="street name..." ng-model="searchTerm">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" ng-click="searchRoute()"><i class="glyphicon glyphicon-search"></i> Search</button>
+        </span>
+      </div>
+    </form>
+
+  </div>
+
+  <div class="topcoat-list__container">
+
+    <h3 class="topcoat-list__header">Routes Found</h3>
+    <ul class="topcoat-list">
+      <li class="topcoat-list__item">AGRONOMICA VIA MAURO RAMOS</li>
+      <li class="topcoat-list__item">AGRONOMICA VIA LAURO LINHARES</li>
+    </ul>
+
+  </div>
+</div>
