@@ -273,8 +273,10 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'views/{,*/}*.html',
-            'images/{,*/}*.{webp}',
-            'fonts/*'
+            'images/{,*/}*.{webp,gif}',
+            'fonts/*',
+            'bower_components/bootstrap/dist/fonts/*.*',
+            'bower_components/topcoat/font/*.*'
           ]
         }, {
           expand: true,

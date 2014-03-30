@@ -5,5 +5,6 @@
 var arctouchApp = angular.module('arctouchApp', [
     'ngCookies',
     'ngSanitize',
-    'ui.router'
+    'ui.router',
+    'chieffancypants.loadingBar'
   ]);
