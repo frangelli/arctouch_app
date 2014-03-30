@@ -1,9 +1,6 @@
-<div class="topcoat-list__container">
-
+<div class="topcoat-list__container list_above_tabs">
     <h3 class="topcoat-list__header">Stops</h3>
     <ul class="topcoat-list">
-      <li class="topcoat-list__item"><span class="badge">1</span><span>AGRONOMICA VIA MAURO RAMOS</span></li>
-      <li class="topcoat-list__item"> <span class="badge">2</span><span>AGRONOMICA VIA LAURO LINHARES</span></li>
+      <li class="topcoat-list__item" ng-repeat="stop in stops"><span class="badge">{{stop.sequence}}</span><span>{{stop.name}}</span></li>
     </ul>
-
-  </div>
+</div>

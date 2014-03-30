@@ -30,15 +30,15 @@ arctouchApp.config(['$stateProvider','$urlRouterProvider', function($stateProvid
     'details': {
       abstract: true,
       templateUrl: 'views/routes_details.html',
-      controller: 'RoutesDetailsController'
+      controller: 'RoutesListController'
     },
 
     'details.stops': {
-      url:'/details/stops',
+      url:'/details/stops/:route_id/:route_name',
       views: {
         'content@details': {
           templateUrl: 'views/route_stops.html',
-          controller: 'RoutesDetailsController'
+          controller: 'RoutesStopsController'
         }
       }
     },
@@ -46,9 +46,9 @@ arctouchApp.config(['$stateProvider','$urlRouterProvider', function($stateProvid
     'details.departures': {
       url:'/details/departures',
       views: {
-        'content@routes': {
+        'content@details': {
           templateUrl: 'views/route_departures.html',
-          controller: 'RoutesDetailsController'
+          controller: 'RoutesDeparturesController'
         }
       }
     }

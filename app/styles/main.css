@@ -43,8 +43,8 @@ label {
 }
 
 .topcoat-tab-bar {
-  position: absolute;
-  bottom: 0px;
+  position: fixed;
+  bottom: 0;
   display: table;
   table-layout: fixed;
   white-space: no-wrap;
@@ -92,6 +92,10 @@ label {
   user-select: none;
   -o-text-overflow: ellipsis;
   height: 45px;
+}
+
+.list_above_tabs {
+  margin-bottom: 45px;
 }
 
 :checked + .topcoat-tab-bar__button,

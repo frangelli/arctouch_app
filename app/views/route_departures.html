@@ -1,1 +1,15 @@
-<h3>DEPARTURES</h3>
+<div class="topcoat-list__container list_above_tabs">
+    <h3 class="topcoat-list__header" data-toggle="collapse" data-target="#weekday">WEEKDAY</h3>
+    <ul id="weekday" class="topcoat-list">
+      <li class="topcoat-list__item" ng-repeat="departure in departures | filter:'weekday'"><span>{{departure.time}} - {{departure.calendar}}</span></li>
+    </ul>
+    <h3 class="topcoat-list__header" data-toggle="collapse" data-target="#saturday">SATURDAY</h3>
+    <ul id="saturday" class="topcoat-list">
+      <li class="topcoat-list__item" ng-repeat="departure in departures | filter:'saturday'"><span>{{departure.time}} - {{departure.calendar}}</span></li>
+    </ul>
+    <h3 class="topcoat-list__header" data-toggle="collapse" data-target="#sunday">SUNDAY</h3>
+    <ul id="sunday" class="topcoat-list">
+      <li class="topcoat-list__item" ng-repeat="departure in departures | filter:'sunday'"><span>{{departure.time}} - {{departure.calendar}}</span></li>
+    </ul>
+</div>
+
