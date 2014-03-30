@@ -1,5 +1,3 @@
-#ArcTouch Test App
-
 ###Working Demo
 [http://projects.yepdev.com](http://projects.yepdev.com)
 
@@ -16,3 +14,4 @@ To build i did use Grunt ( that comes with yeoman ):
 * Grunt
 * AngularJS ( with third party modules like ui-router )
 * HTML 5
+
