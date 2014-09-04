@@ -1,0 +1,23 @@
+<div class="topcoat-navigation-bar">
+    <div class="topcoat-navigation-bar__item left quarter">
+      <a ui-sref="routes" class="btn btn-default btn-small">Back</a>
+   </div>
+   <div class="topcoat-navigation-bar__item center">
+       <h1 class="topcoat-navigation-bar__title">{{selectedRoute.longName}}</h1>
+   </div>
+
+</div>
+
+<ui-view name="content"></ui-view>
+
+<div class="topcoat-tab-bar full">
+   <label class="topcoat-tab-bar__item">
+     <input type="radio" name="topcoat" class="hide-input">
+     <button class="topcoat-tab-bar__button full" ng-click="showStops()"><i class="glyphicon glyphicon-road"></i> Stops</button>
+   </label>
+   <label class="topcoat-tab-bar__item">
+     <input type="radio" name="topcoat">
+     <button class="topcoat-tab-bar__button full" ng-click="showDepartures()"><i class="glyphicon glyphicon-time"></i> Departures</button>
+   </label>
+</div>
+

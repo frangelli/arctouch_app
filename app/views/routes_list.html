@@ -1,0 +1,38 @@
+<!-- NAVIGATION BAR -->
+<div class="topcoat-navigation-bar">
+   <div class="topcoat-navigation-bar__item center full">
+       <h4 class=""><img src="images/bus.png" alt="Bus Icon">Floripa Routes</h1>
+   </div>
+</div>
+
+<div id="main">
+  <!-- SEARCH BOX -->
+  <div class="search-box">
+    <form ng-submit="searchRoute()">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="street name ex: lauro linhares" ng-model="searchTerm">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" ng-click="searchRoute()"><i class="glyphicon glyphicon-search"></i> Search</button>
+        </span>
+      </div>
+    </form>
+
+  </div>
+
+  <!-- LIST OF ROUTES FOUND -->
+  <div class="topcoat-list__container" ng-show="routes.length">
+    <h3 class="topcoat-list__header">Routes Found</h3>
+    <ul class="topcoat-list">
+      <li class="topcoat-list__item" ng-repeat="route in routes" ng-click="showDetails(route)">
+      <span class="label label-default">{{route.shortName}}</span>
+      {{route.longName}}
+      <i class="glyphicon glyphicon-chevron-right pull-right"></i></li>
+    </ul>
+  </div>
+
+  <div class="well" ng-hide="routes.length">
+    <p class="lead">No routes found!</p>
+    <p class="lead">How about making a new search above?</p>
+  </div>
+
+</div>
