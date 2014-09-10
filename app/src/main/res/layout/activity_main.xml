@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@drawable/backrepeat"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:inputType="text"
+            android:id="@+id/txtRouteName"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_search_route_hint"
+            android:imeOptions="actionSearch"/>
+        
+        <Button
+            android:id="@+id/btnSearchRoute"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/search"
+            android:onClick="searchRoute"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/handEmptyIndicator"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/hand"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/emptyListMessage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:visibility="visible"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"
+        android:text="@string/empty_list_message"/>
+
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/routesListView"></ListView>
+
+
+
+</LinearLayout>

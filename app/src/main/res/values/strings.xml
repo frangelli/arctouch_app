@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Floripa Bus Routes</string>
+    <string name="exit_the_app">Exit</string>
+    <string name="search_by_location">Search by Location</string>
+    <string name="search">Search</string>
+    <string name="txt_search_route_hint">Ex: lauro linhares</string>
+    <string name="empty_list_message">No results to show. Try to search something above!</string>
+
+</resources>
