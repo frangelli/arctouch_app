@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity" >
+
+
+    <item android:id="@+id/search_by_location"
+        android:title="@string/search_by_location"
+        android:showAsAction="ifRoom|withText"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_place"/>
+
+    <item android:id="@+id/exit_the_app"
+        android:title="@string/exit_the_app"
+        android:showAsAction="never"
+        android:orderInCategory="101"
+        />
+</menu>

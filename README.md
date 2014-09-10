@@ -1,4 +1,4 @@
-arctouch_app
-============
+# Arctouch Android Test App
 
-ArcTouch Test App
+## The app has been developed with Android Studio
+
